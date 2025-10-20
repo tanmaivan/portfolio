@@ -1,4 +1,6 @@
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Reveal } from "./Reveal";
 
 const projects = [
@@ -14,18 +16,40 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [lightboxVisible, setLightboxVisible] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setSelectedImage(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const closeLightbox = (e) => {
+    if (!e || e.target === e.currentTarget) {
+      setLightboxVisible(false);
+      setTimeout(() => setSelectedImage(null), 200);
+    }
+  };
+
+  useEffect(() => {
+    if (selectedImage) {
+      // Trigger enter animation on next tick
+      const id = setTimeout(() => setLightboxVisible(true), 0);
+      return () => clearTimeout(id);
+    } else {
+      setLightboxVisible(false);
+    }
+  }, [selectedImage]);
+
   return (
     <section id="projects" className="py-10 px-0 sm:px-4 relative">
       <div className="container mx-auto max-w-5xl px-4 sm:px-0">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-rainbow"> Projects </span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
+          Featured <span className="text-rainbow">Projects</span>
         </h2>
-
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
-        </p>
 
         <div className="space-y-8">
           {projects.map((project, key) => (
@@ -33,13 +57,18 @@ export const ProjectsSection = () => {
               <div className="group theme-border rounded-xl overflow-hidden shadow-xs card-hover bg-secondary/60">
                 <div className="flex flex-col lg:flex-row">
                   {/* Image */}
-                  <div className="lg:w-1/3 h-48 sm:h-64 lg:h-auto overflow-hidden bg-secondary/20 flex items-center justify-center">
+                  <button
+                    type="button"
+                    className="lg:w-1/3 h-48 sm:h-64 lg:h-auto overflow-hidden bg-secondary/20 flex items-center justify-center cursor-zoom-in focus:outline-none"
+                    onClick={() => setSelectedImage(project.image)}
+                    aria-label={`Open image preview for ${project.title}`}
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
-                  </div>
+                  </button>
 
                   {/* Content */}
                   <div className="lg:w-2/3 p-4 sm:p-6 flex flex-col">
@@ -61,13 +90,17 @@ export const ProjectsSection = () => {
                     <p className="text-muted-foreground mb-4 flex-grow">
                       {project.description}
                     </p>
-                    <div className="flex justify-end">
+                    <div className="mt-2 flex justify-end">
                       <a
                         href={project.githubUrl}
                         target="_blank"
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors duration-300"
+                        title="View Code"
+                        aria-label="View project source code on GitHub"
                       >
-                        <Github size={20} />
+                        <span>View Code</span>
+                        <ExternalLink size={16} />
                       </a>
                     </div>
                   </div>
@@ -88,6 +121,28 @@ export const ProjectsSection = () => {
           </a>
         </div>
       </div>
+
+      {selectedImage &&
+        createPortal(
+          <div
+            className={`fixed inset-0 w-screen h-screen z-[99999] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-200 ease-out ${
+              lightboxVisible ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={closeLightbox}
+            role="dialog"
+            aria-modal="true"
+          >
+            <img
+              src={selectedImage}
+              alt="Project preview"
+              onClick={(e) => e.stopPropagation()}
+              className={`block max-h-[85vh] max-w-[95vw] object-contain transition-all duration-200 ease-out ${
+                lightboxVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+            />
+          </div>,
+          document.body
+        )}
     </section>
   );
 };
