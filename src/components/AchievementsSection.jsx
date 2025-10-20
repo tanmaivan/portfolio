@@ -16,7 +16,7 @@ export const AchievementsSection = () => {
       title:
         "Student of Five Merits – University of Information Technology, VNUHCM",
       subtitle:
-        "Recognized for excellence in Ethics, Academic Performance, Physical Fitness, Volunteering, and Integration",
+        "Recognized for excellence in Ethics, Academic Accomplishment, Physical Fitness, Voluntary Activities, and Integration",
       bullets: ["Academic Year 2022–2023", "Academic Year 2023–2024"],
     },
   ];

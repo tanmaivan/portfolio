@@ -4,7 +4,7 @@ export const EducationSection = () => {
   const education = [
     {
       school:
-        "Vietnam National University HCMC - University of Information Technology",
+        "University of Information Technology - Vietnam National University Ho Chi Minh City",
       degree: "B.S. in Computer Science",
       time: "2022 - 2025",
       details: "GPA: 8.85 / 10",
