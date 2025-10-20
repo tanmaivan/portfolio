@@ -12,21 +12,24 @@ export const AboutSection = () => {
         <div className="space-y-8 sm:space-y-10">
           <div className="space-y-4 sm:space-y-6">
             <p className="text-sm sm:text-base text-muted-foreground text-justify leading-relaxed">
-              I'm a recent Computer Science graduate from VNU–University of
-              Information Technology (UIT). I'm developing a strong foundation
-              in data engineering, cloud platforms, and distributed systems.
+              I'm a recent Computer Science graduate from VNU-HCM University of
+              Information Technology (VNUHCM-UIT). I’m building a strong
+              foundation in data engineering, cloud platforms, and distributed
+              systems.
             </p>
 
             <p className="text-sm sm:text-base text-muted-foreground text-justify leading-relaxed">
-              My work and learning focus on building reliable data pipelines,
-              managing large datasets, and understanding how modern data
+              My work and learning focus on developing reliable data pipelines,
+              managing large-scale datasets, and understanding how modern data
               infrastructures operate in production environments.
             </p>
 
             <p className="text-sm sm:text-base text-muted-foreground text-justify leading-relaxed">
-              I'm exploring tools such as Python, SQL, Prefect, BigQuery,
-              Terraform, and dbt to design end-to-end workflows that transform
-              and deliver data effectively.
+              I’m exploring modern data engineering practices and technologies
+              to design end-to-end workflows that efficiently transform and
+              deliver data for analytics and decision-making. I aim to build
+              scalable, maintainable data systems that bridge engineering and
+              business impact.
             </p>
 
             {/* Cards moved below content */}

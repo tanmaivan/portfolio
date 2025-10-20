@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
                   {/* Image */}
                   <button
                     type="button"
-                    className="lg:w-1/3 h-48 sm:h-64 lg:h-auto overflow-hidden bg-secondary/20 flex items-center justify-center cursor-zoom-in focus:outline-none"
+                    className="lg:w-1/3 h-48 sm:h-64 lg:h-auto overflow-hidden bg-secondary/20 flex items-center justify-center cursor-zoom-in focus:outline-none p-4 sm:p-6"
                     onClick={() => setSelectedImage(project.image)}
                     aria-label={`Open image preview for ${project.title}`}
                   >
