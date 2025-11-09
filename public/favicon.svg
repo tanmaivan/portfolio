@@ -1,12 +1,1 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-  <text x="16" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">T</text>
-  <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="33%" style="stop-color:#60a5fa;stop-opacity:1" />
-      <stop offset="66%" style="stop-color:#8b5cf6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="500" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/></defs><rect x="-37.5" width="450" fill="#ffffff" y="-37.499999" height="449.999989" fill-opacity="1"/><rect x="-37.5" width="450" fill="#ffffff" y="-37.499999" height="449.999989" fill-opacity="1"/><g fill="#252525" fill-opacity="1"><g transform="translate(55.70726, 256.874983)"><g><path d="M 108.96875 -122.4375 L 109.484375 -68.390625 L 71.359375 -70.140625 L 79.75 0 L 32.875 0 L 41.109375 -70.140625 L 3.140625 -68.390625 L 3.5 -122.4375 Z M 108.96875 -122.4375 "/></g></g></g><g fill="#252525" fill-opacity="1"><g transform="translate(167.469852, 256.874983)"><g><path d="M 57.71875 0 L 4.375 0 L 14.171875 -122.4375 L 64.359375 -122.4375 L 74.515625 -53.875 L 77.140625 -53.875 L 87.453125 -122.4375 L 137.46875 -122.4375 L 147.453125 0 L 93.921875 0 L 102.84375 -74.15625 L 100.21875 -74.515625 L 84.65625 -14.859375 L 66.984375 -14.859375 L 51.59375 -74.515625 L 48.796875 -74.15625 Z M 57.71875 0 "/></g></g></g></svg>
