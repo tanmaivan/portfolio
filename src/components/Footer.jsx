@@ -6,6 +6,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  Code,
 } from "lucide-react";
 
 export const Footer = () => {
@@ -46,28 +47,49 @@ export const Footer = () => {
                 href="https://linkedin.com/in/tanmaivan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="relative text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-110 group"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-black/80 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-0 pointer-events-none z-50">
+                  LinkedIn
+                </span>
               </a>
               <a
                 href="https://github.com/tanmaivan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="relative text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-110 group"
                 aria-label="GitHub"
               >
                 <Github size={20} />
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-black/80 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-0 pointer-events-none z-50">
+                  GitHub
+                </span>
               </a>
               <a
                 href="https://facebook.com/mvntnde"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="relative text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-110 group"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-black/80 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-0 pointer-events-none z-50">
+                  Facebook
+                </span>
+              </a>
+              <a
+                href="https://leetcode.com/u/tanmaivan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-110 group"
+                aria-label="LeetCode"
+              >
+                <Code size={20} />
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-black/80 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-0 pointer-events-none z-50">
+                  LeetCode
+                </span>
               </a>
             </div>
           </div>
