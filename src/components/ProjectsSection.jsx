@@ -13,6 +13,24 @@ const projects = [
     tags: ["GCP", "BigQuery", "Terraform", "dbt", "Prefect", "Python", "SQL"],
     githubUrl: "https://github.com/tanmaivan/hackernews-pipeline",
   },
+  {
+    id: 2,
+    title: "Geo Weather Lake",
+    description:
+      "A comprehensive Data Lakehouse on Docker implementing the Medallion Architecture. It automates the ingestion of historical and real-time weather data into MinIO (Delta Lake), transforms it via dbt into a Star Schema powered by DuckDB, and visualizes geospatial insights in Metabase.",
+    image: "/projects/project2-geo-weather-lake.png",
+    tags: [
+      "Docker",
+      "Airflow",
+      "dbt",
+      "DuckDB",
+      "Delta Lake",
+      "MinIO",
+      "Metabase",
+      "Python",
+    ],
+    githubUrl: "https://github.com/tanmaivan/geo-weather-lake",
+  },
 ];
 
 export const ProjectsSection = () => {
