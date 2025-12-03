@@ -31,6 +31,24 @@ const projects = [
     ],
     githubUrl: "https://github.com/tanmaivan/geo-weather-lake",
   },
+  {
+    id: 3,
+    title: "SafeBank Data Platform",
+    description:
+      "Architected a production-grade Banking Data Lakehouse capable of processing real-time ACID transactions. The platform leverages Debezium for low-latency CDC ingestion and Spark Structured Streaming to orchestrate a multi-hop Medallion architecture on Delta Lake. It solves complex financial engineering challenges, including SCD Type 2 history tracking for compliance, multi-currency normalization, and fraud detection, delivering actionable insights via automated Executive Dashboards.",
+    image: "/projects/project3-safebank-data-platform.png.png",
+    tags: [
+      "Spark",
+      "Structured Streaming",
+      "SCD Type 2",
+      "MinIO",
+      "Delta Lake",
+      "Metabase",
+      "Python",
+      "SQL",
+    ],
+    githubUrl: "https://github.com/tanmaivan/safebank-data-platform",
+  },
 ];
 
 export const ProjectsSection = () => {

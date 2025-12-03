@@ -79,7 +79,7 @@ export const Footer = () => {
                   Facebook
                 </span>
               </a>
-              <a
+              {/* <a
                 href="https://leetcode.com/u/tanmaivan/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -90,7 +90,7 @@ export const Footer = () => {
                 <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-black/80 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-0 pointer-events-none z-50">
                   LeetCode
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
