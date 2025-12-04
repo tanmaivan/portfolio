@@ -170,36 +170,22 @@
 }
 
 @utility theme-border {
-  @apply relative rounded-md;
-  /* Light mode: rainbow border */
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)))
-      padding-box,
-    linear-gradient(90deg, #60a5fa, #93c5fd, #c4b5fd) border-box;
-  border: 1px solid transparent;
+  @apply relative rounded-md border border-primary/20;
+  background: transparent;
 }
 
 .dark .theme-border {
-  /* Dark mode: single gray color border */
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)))
-      padding-box,
-    #4b5563 border-box;
-  border: 1px solid transparent;
+  @apply border border-primary/20;
+  background: transparent;
 }
 
 @utility btn-rainbow {
-  @apply inline-flex items-center gap-2 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95;
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)))
-      padding-box,
-    linear-gradient(90deg, #3b82f6, #60a5fa, #8b5cf6, #6d28d9) border-box;
-  border: 1px solid transparent;
-  color: hsl(var(--foreground));
+  @apply inline-flex items-center gap-2 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 bg-primary text-primary-foreground hover:bg-primary/90;
+  border: none;
 }
 
 .dark .btn-rainbow {
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)))
-      padding-box,
-    linear-gradient(90deg, #f8fbff, #c9eeff, #7dd3fc, #c9eeff, #f8fbff)
-      border-box;
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
 }
 
 @utility minimalist-button {
@@ -262,26 +248,19 @@
 
 /* rainbow text */
 .text-rainbow {
-  /* Light mode: blue → purple gradient */
-  background: linear-gradient(90deg, #3b82f6, #60a5fa, #8b5cf6, #6d28d9);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  /* Solid color: Primary Blue */
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: hsl(var(--primary));
+  text-shadow: none;
 }
 
 .dark .text-rainbow {
-  background: linear-gradient(
-    90deg,
-    #f8fbff,
-    #c9eeff,
-    #7dd3fc,
-    #c9eeff,
-    #f8fbff
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 8px rgba(125, 211, 252, 0.35),
-    0 0 16px rgba(200, 240, 255, 0.25);
+  /* Solid color: Primary Light */
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: hsl(var(--foreground));
+  text-shadow: none;
 }

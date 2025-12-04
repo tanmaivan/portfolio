@@ -24,29 +24,8 @@ export const MinimalistBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Light mode: rainbow gradient */}
-      {!isDarkMode && (
-        <>
-          {/* Blurred conic rainbow to create smooth blending */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "conic-gradient(from 0deg at 50% 50%, #ff6b6b 0deg, #ff8a6b 40deg, #ffd166 80deg, #8be38f 120deg, #06d6a0 160deg, #32b0c9 200deg, #118ab2 240deg, #6f7de8 280deg, #8a5cf5 320deg, #ff6b6b 360deg)",
-              filter: "blur(36px)",
-              transform: "scale(1.15)",
-              opacity: 0.35,
-            }}
-          />
-          {/* Center blend to avoid hard meeting point */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(closest-side at 50% 50%, rgba(255,255,255,0.55), rgba(255,255,255,0.0) 55%)",
-            }}
-          />
-        </>
-      )}
+      {/* Light mode: solid background (handled by CSS), no rainbow */}
+      {!isDarkMode && null}
 
       {/* Subtle grid pattern (only in dark mode) */}
       {isDarkMode && (
