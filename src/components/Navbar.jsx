@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
@@ -14,6 +15,7 @@ const navItems = [
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,7 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav
       className={cn(
@@ -30,13 +33,13 @@ export const Navbar = () => {
         "py-3 bg-background/80 backdrop-blur-md shadow-sm border-b border-border/50"
       )}
     >
-      <div className="w-full mx-4 sm:mx-6 lg:mx-8 xl:mx-auto xl:max-w-6xl flex items-center justify-between">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:mx-auto xl:max-w-6xl flex items-center justify-between">
         <a
           className="text-lg sm:text-xl font-bold flex items-center"
           href="#home"
         >
           <span className="relative z-10">
-            <span className="text-rainbow">Tan Mai</span> Portfolio
+            <span className="text-rainbow">TanMai</span> Portfolio
           </span>
         </a>
 
@@ -54,11 +57,36 @@ export const Navbar = () => {
           <ThemeToggle />
         </div>
 
-        {/* mobile nav - removed for simplicity */}
-        <div className="md:hidden">
+        {/* mobile nav toggle */}
+        <div className="md:hidden flex items-center gap-4">
           <ThemeToggle />
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 text-foreground/80 hover:text-primary transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* mobile menu overlay */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg animate-fade-in">
+          <div className="flex flex-col py-4 px-6 space-y-4">
+            {navItems.map((item, key) => (
+              <a
+                key={key}
+                href={item.href}
+                className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors duration-300 py-2 border-b border-border/10 last:border-0"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

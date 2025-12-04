@@ -95,20 +95,20 @@ export const ProjectsSection = () => {
                   {/* Image */}
                   <button
                     type="button"
-                    className="lg:w-1/3 h-48 sm:h-64 lg:h-auto overflow-hidden bg-secondary/20 flex items-center justify-center cursor-zoom-in focus:outline-none p-4 sm:p-6"
+                    className="lg:w-1/3 h-auto sm:h-64 lg:h-auto overflow-hidden bg-secondary/20 flex items-center justify-center cursor-zoom-in focus:outline-none p-4 pb-0 sm:p-6"
                     onClick={() => setSelectedImage(project.image)}
                     aria-label={`Open image preview for ${project.title}`}
                   >
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-auto sm:h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </button>
 
                   {/* Content */}
-                  <div className="lg:w-2/3 p-4 sm:p-6 flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="lg:w-2/3 p-4 pt-0 -mt-4 sm:mt-0 sm:p-6 flex flex-col">
+                    <div className="flex flex-wrap gap-2 mb-1 sm:mb-4">
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
@@ -123,7 +123,7 @@ export const ProjectsSection = () => {
                     <h3 className="text-xl font-semibold mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 flex-grow">
+                    <p className="text-muted-foreground mb-4 flex-grow text-justify">
                       {project.description}
                     </p>
                     <div className="mt-2 flex justify-end">
