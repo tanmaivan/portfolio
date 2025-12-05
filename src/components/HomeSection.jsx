@@ -17,7 +17,7 @@ export const HomeSection = () => {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 opacity-0 animate-fade-in-delay-3 text-justify">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 opacity-0 animate-fade-in-delay-3">
               I focus on building and learning data systems that handle
               large-scale information efficiently. My interest lies in data
               engineering and big data technologies - turning raw data into

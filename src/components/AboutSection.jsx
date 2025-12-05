@@ -11,20 +11,20 @@ export const AboutSection = () => {
 
         <div className="space-y-8 sm:space-y-10">
           <div className="space-y-4 sm:space-y-6">
-            <p className="text-sm sm:text-base text-muted-foreground text-justify leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               I'm a recent Computer Science graduate from VNU-HCM University of
               Information Technology (VNUHCM-UIT). I’m building a strong
               foundation in data engineering, cloud platforms, and distributed
               systems.
             </p>
 
-            <p className="text-sm sm:text-base text-muted-foreground text-justify leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               My work and learning focus on developing reliable data pipelines,
               managing large-scale datasets, and understanding how modern data
               infrastructures operate in production environments.
             </p>
 
-            <p className="text-sm sm:text-base text-muted-foreground text-justify leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               I’m exploring modern data engineering practices and technologies
               to design end-to-end workflows that efficiently transform and
               deliver data for analytics and decision-making. I aim to build

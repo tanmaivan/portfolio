@@ -123,7 +123,7 @@ export const ProjectsSection = () => {
                     <h3 className="text-xl font-semibold mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 flex-grow text-justify">
+                    <p className="text-muted-foreground mb-4 flex-grow">
                       {project.description}
                     </p>
                     <div className="mt-2 flex justify-end">

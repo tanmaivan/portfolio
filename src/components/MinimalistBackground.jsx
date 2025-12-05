@@ -30,42 +30,7 @@ export const MinimalistBackground = () => {
       {/* Subtle grid pattern (only in dark mode) */}
       {isDarkMode && (
         <>
-          {/* Clouds */}
-          <div
-            className="cloud"
-            style={{ width: "480px", height: "220px", top: "10%", left: "-5%" }}
-          />
-          <div
-            className="cloud"
-            style={{
-              width: "520px",
-              height: "240px",
-              top: "20%",
-              right: "-8%",
-            }}
-          />
-          <div
-            className="cloud"
-            style={{
-              width: "360px",
-              height: "180px",
-              top: "35%",
-              left: "15%",
-              opacity: 0.4,
-            }}
-          />
-          <div
-            className="cloud"
-            style={{
-              width: "420px",
-              height: "200px",
-              top: "55%",
-              right: "10%",
-              opacity: 0.45,
-            }}
-          />
-
-          {/* Rain removed as requested */}
+          {/* Clouds removed as requested for pure black background */}
         </>
       )}
     </div>

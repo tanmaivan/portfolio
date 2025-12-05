@@ -88,7 +88,7 @@
   }
 
   .dark {
-    --background: 0 0% 5%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 90%;
 
     --card: 0 0% 12%;
@@ -248,12 +248,12 @@
 
 /* rainbow text */
 .text-rainbow {
-  /* Solid color: Primary Blue */
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  color: hsl(var(--primary));
-  text-shadow: none;
+  /* Light mode: Professional Deep Blue -> Teal Gradient */
+  background: linear-gradient(90deg, #1e3a8a, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
 }
 
 .dark .text-rainbow {
