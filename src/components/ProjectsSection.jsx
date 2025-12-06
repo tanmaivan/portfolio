@@ -1,9 +1,19 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Calendar } from "lucide-react";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Reveal } from "./Reveal";
 
 const projects = [
+  {
+    id: 0,
+    title: "Data Science Salary Prediction",
+    description:
+      "Working in a team of 4, I took charge of the Exploratory Data Analysis (EDA) and Model Training phases. I uncovered key correlations between skills and compensation, and optimized an XGBoost model that achieved the highest accuracy (R² ~0.83) compared to other algorithms.",
+    image: "/projects/project0-data-science-salary-prediction.png",
+    tags: ["Python", "SQL", "XGBoost", "EDA", "Machine Learning"],
+    githubUrl: "https://github.com/tanmaivan/Data-Science-Salary-Prediction",
+    period: "2024",
+  },
   {
     id: 1,
     title: "Hacker News Analytics Platform",
@@ -12,6 +22,7 @@ const projects = [
     image: "/projects/project1-hackernews.png",
     tags: ["GCP", "BigQuery", "Terraform", "dbt", "Prefect", "Python", "SQL"],
     githubUrl: "https://github.com/tanmaivan/hackernews-pipeline",
+    period: "2025",
   },
   {
     id: 2,
@@ -30,6 +41,7 @@ const projects = [
       "Python",
     ],
     githubUrl: "https://github.com/tanmaivan/geo-weather-lake",
+    period: "2025",
   },
   {
     id: 3,
@@ -48,6 +60,7 @@ const projects = [
       "SQL",
     ],
     githubUrl: "https://github.com/tanmaivan/safebank-data-platform",
+    period: "2025",
   },
 ];
 
@@ -120,10 +133,16 @@ export const ProjectsSection = () => {
                       ))}
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-3">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4 flex-grow">
+                    <div className="flex justify-between items-center mb-3">
+                      <h3 className="text-xl font-semibold">
+                        {project.title}
+                      </h3>
+                      <div className="flex items-center gap-1 text-xs text-muted-foreground italic shrink-0">
+                        <Calendar size={12} />
+                        <span>{project.period}</span>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground mb-4 flex-grow text-left">
                       {project.description}
                     </p>
                     <div className="mt-2 flex justify-end">
