@@ -31,6 +31,9 @@ export const Home = () => {
             <SkillsSection />
           </SectionCard>
           <SectionCard>
+            <ProjectsSection />
+          </SectionCard>
+          <SectionCard>
             <EducationSection />
           </SectionCard>
           <SectionCard>
@@ -38,9 +41,6 @@ export const Home = () => {
           </SectionCard>
           <SectionCard>
             <CertificationsSection />
-          </SectionCard>
-          <SectionCard>
-            <ProjectsSection />
           </SectionCard>
 
           {/* Contact section removed as per request; contact info moved to Footer */}
