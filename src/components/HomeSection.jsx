@@ -1,4 +1,4 @@
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, FileText } from "lucide-react";
 
 export const HomeSection = () => {
   return (
@@ -24,16 +24,17 @@ export const HomeSection = () => {
               useful, structured insights.
             </p>
 
-            {/* <div className="pt-2 opacity-0 animate-fade-in-delay-4">
+            <div className="pt-2 opacity-0 animate-fade-in-delay-4">
               <a
-                href="/resume.pdf"
-                download
+                href="/profile/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-rainbow inline-flex items-center gap-2 text-sm sm:text-base"
               >
-                <Download className="h-4 w-4 sm:h-5 sm:w-5" />
-                Download Resume
+                <FileText className="h-4 w-4 sm:h-5 sm:w-5" />
+                View CV
               </a>
-            </div> */}
+            </div>
           </div>
 
           {/* Personal Image */}
